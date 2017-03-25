@@ -124,7 +124,7 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "W00t"
+#define CUSTOM_MACHINE_NAME "Kataplop"
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
@@ -492,14 +492,14 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 2560, 96.45 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 3, 25 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -507,7 +507,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 8000, 8000, 80, 1000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -957,28 +957,6 @@
 #define HOMING_FEEDRATE_XY (50*60)
 #define HOMING_FEEDRATE_Z  (5*60)
 
-// ADDED BY CLEM
-//
-// MOVEMENT SETTINGS
-// @section motion
-//
-
-// default settings
-
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 2560, 96.45}  // default steps per unit for Ultimaker
-#define DEFAULT_MAX_FEEDRATE          {300, 300, 3, 25}    // (mm/sec)
-#define DEFAULT_MAX_ACCELERATION      {8000, 8000, 80, 1000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
-
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration in mm/s^2 for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration in mm/s^2 for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration in mm/s^2 for travel (non printing) moves
-
-// The speed change that does not require acceleration (i.e. the software might assume it can be done instantaneously)
-#define DEFAULT_XYJERK                20.0    // (mm/sec)
-#define DEFAULT_ZJERK                 0.4     // (mm/sec)
-#define DEFAULT_EJERK                 5.0    // (mm/sec)
-// END OF ADDED BY CLEM
-
 //=============================================================================
 //============================= Additional Features ===========================
 //=============================================================================
@@ -1300,7 +1278,7 @@
 //
 // ULTIMAKER Controller.
 //
-#define ULTIMAKERCONTROLLER
+//#define ULTIMAKERCONTROLLER
 
 //
 // ULTIPANEL as seen on Thingiverse.
